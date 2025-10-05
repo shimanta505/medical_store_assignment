@@ -8,6 +8,11 @@ class AppTextTheme {
       fontFamily: 'Roboto',
       fontWeight: FontWeight.bold,
     ),
+    headlineSmall: TextStyle(
+      fontSize: 22.sp,
+      fontFamily: "Roboto",
+      fontWeight: FontWeight.w600,
+    ),
     titleLarge: TextStyle(
       fontSize: 16.sp,
       fontFamily: 'Roboto',
@@ -18,6 +23,23 @@ class AppTextTheme {
       fontSize: 16.sp,
       fontFamily: 'Roboto',
       fontWeight: FontWeight.w400,
+    ),
+    titleSmall: TextStyle(
+      fontSize: 14.sp,
+      fontFamily: 'Roboto',
+      fontWeight: FontWeight.w400,
+    ),
+    bodyLarge: TextStyle(
+      fontSize: 18.sp,
+      fontFamily: 'Roboto',
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.normal,
+    ),
+    bodyMedium: TextStyle(
+      fontSize: 12.sp,
+      fontWeight: FontWeight.w400,
+      fontFamily: 'Roboto',
+      fontStyle: FontStyle.normal,
     ),
   );
 }

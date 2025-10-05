@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:medical_store_app/screens/authentication/login/login_screen.dart';
+import 'package:medical_store_app/screens/home/home_screen.dart';
 import 'package:medical_store_app/theme/theme.dart';
 
 void main() {
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       minTextAdapt: true,
-      child: LoginScreen(),
+      child: HomeScreen(),
       builder: (context, child) {
         return GetMaterialApp(
           title: 'Medical store',
