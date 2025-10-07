@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medical_store_app/consts/app_assets.dart';
 import 'package:medical_store_app/consts/app_colors.dart';
+import 'package:medical_store_app/screens/home/widgets/home_grid_view_widget.dart';
 import 'package:medical_store_app/widgets/custom_appbar.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -12,6 +13,55 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: _homeAppBar(context),
+      body: GridView(
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+        ),
+        children: [
+          HomeGridViewWidget(
+            title: 'Total Order',
+            rxValue: '20',
+            height: 100.h,
+            width: 100.w,
+          ),
+          HomeGridViewWidget(
+            title: 'Total Order',
+            rxValue: '20',
+            height: 100.h,
+            width: 100.w,
+          ),
+          HomeGridViewWidget(
+            title: 'Total Order',
+            rxValue: '20',
+            height: 100.h,
+            width: 100.w,
+          ),
+          HomeGridViewWidget(
+            title: 'Total Order',
+            rxValue: '20',
+            height: 100.h,
+            width: 100.w,
+          ),
+          HomeGridViewWidget(
+            title: 'Total Order',
+            rxValue: '20',
+            height: 100.h,
+            width: 100.w,
+          ),
+          HomeGridViewWidget(
+            title: 'Total Order',
+            rxValue: '20',
+            height: 100.h,
+            width: 100.w,
+          ),
+          HomeGridViewWidget(
+            title: 'Total Order',
+            rxValue: '20',
+            height: 100.h,
+            width: 100.w,
+          ),
+        ],
+      ),
     );
   }
 

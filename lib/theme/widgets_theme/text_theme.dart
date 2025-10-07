@@ -8,6 +8,11 @@ class AppTextTheme {
       fontFamily: 'Roboto',
       fontWeight: FontWeight.bold,
     ),
+    headlineMedium: TextStyle(
+      fontSize: 26.sp,
+      fontFamily: 'Roboto',
+      fontWeight: FontWeight.w600,
+    ),
     headlineSmall: TextStyle(
       fontSize: 22.sp,
       fontFamily: "Roboto",
