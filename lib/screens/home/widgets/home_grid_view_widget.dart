@@ -38,7 +38,7 @@ class HomeGridViewWidget extends StatelessWidget {
       child: Stack(
         children: [
           _setBackground(
-            backgroundType ?? BackgroundType.GreenGradient,
+            backgroundType ?? BackgroundType.greenGradient,
             height,
             width,
           ),
@@ -82,7 +82,7 @@ class HomeGridViewWidget extends StatelessWidget {
 
   _setBackground(BackgroundType backgroundType, double? height, double? width) {
     switch (backgroundType) {
-      case BackgroundType.NestedContainer:
+      case BackgroundType.nestedContainer:
         return Stack(
           children: [
             Positioned(
@@ -120,7 +120,7 @@ class HomeGridViewWidget extends StatelessWidget {
           ],
         );
 
-      case BackgroundType.GreenGradient:
+      case BackgroundType.greenGradient:
         return Container(
           height: double.maxFinite,
           width: double.maxFinite,
@@ -135,7 +135,7 @@ class HomeGridViewWidget extends StatelessWidget {
             ),
           ),
         );
-      case BackgroundType.YellowGradient:
+      case BackgroundType.yellowGradient:
         return Container(
           height: double.maxFinite,
           width: double.maxFinite,
@@ -154,4 +154,4 @@ class HomeGridViewWidget extends StatelessWidget {
   }
 }
 
-enum BackgroundType { NestedContainer, GreenGradient, YellowGradient }
+enum BackgroundType { nestedContainer, greenGradient, yellowGradient }

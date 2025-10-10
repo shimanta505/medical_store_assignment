@@ -1,67 +1,78 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:medical_store_app/consts/app_assets.dart';
 import 'package:medical_store_app/consts/app_colors.dart';
+import 'package:medical_store_app/screens/home/homeController.dart';
 import 'package:medical_store_app/screens/home/widgets/home_grid_view_widget.dart';
 import 'package:medical_store_app/widgets/custom_appbar.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class HomeScreen extends GetView<HomeController> {
+  HomeScreen({super.key});
+
+  HomeController homeController = Get.put(HomeController());
+  PageController pageController = PageController();
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: _homeAppBar(context),
-      body: GridView(
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-        ),
-        children: [
-          HomeGridViewWidget(
-            title: 'Total Order',
-            rxValue: '20',
-            height: 100.h,
-            width: 100.w,
-          ),
-          HomeGridViewWidget(
-            title: 'Total Order',
-            rxValue: '20',
-            height: 100.h,
-            width: 100.w,
-          ),
-          HomeGridViewWidget(
-            title: 'Total Order',
-            rxValue: '20',
-            height: 100.h,
-            width: 100.w,
-          ),
-          HomeGridViewWidget(
-            title: 'Total Order',
-            rxValue: '20',
-            height: 100.h,
-            width: 100.w,
-          ),
-          HomeGridViewWidget(
-            title: 'Total Order',
-            rxValue: '20',
-            height: 100.h,
-            width: 100.w,
-          ),
-          HomeGridViewWidget(
-            title: 'Total Order',
-            rxValue: '20',
-            height: 100.h,
-            width: 100.w,
-          ),
-          HomeGridViewWidget(
-            title: 'Total Order',
-            rxValue: '20',
-            height: 100.h,
-            width: 100.w,
-          ),
-        ],
+    return GetBuilder<HomeController>(
+      builder: (homeController) => Scaffold(
+        backgroundColor: Colors.white,
+        appBar: _homeAppBar(context),
+        body: _homePage(context),
       ),
+    );
+  }
+
+  Widget _homePage(BuildContext context) {
+    return GridView(
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 2,
+      ),
+      children: [
+        HomeGridViewWidget(
+          title: 'Total Order',
+          rxValue: '20',
+          height: 100.h,
+          width: 100.w,
+        ),
+        HomeGridViewWidget(
+          title: 'Total Order',
+          rxValue: '20',
+          height: 100.h,
+          width: 100.w,
+        ),
+        HomeGridViewWidget(
+          title: 'Total Order',
+          rxValue: '20',
+          height: 100.h,
+          width: 100.w,
+        ),
+        HomeGridViewWidget(
+          title: 'Total Order',
+          rxValue: '20',
+          height: 100.h,
+          width: 100.w,
+        ),
+        HomeGridViewWidget(
+          title: 'Total Order',
+          rxValue: '20',
+          height: 100.h,
+          width: 100.w,
+        ),
+        HomeGridViewWidget(
+          title: 'Total Order',
+          rxValue: '20',
+          height: 100.h,
+          width: 100.w,
+        ),
+        HomeGridViewWidget(
+          title: 'Total Order',
+          rxValue: '20',
+          height: 100.h,
+          width: 100.w,
+        ),
+      ],
     );
   }
 
