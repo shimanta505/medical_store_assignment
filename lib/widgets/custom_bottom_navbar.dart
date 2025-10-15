@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:medical_store_app/routes/nav_route_controller.dart';
 import 'package:medical_store_app/screens/home/home_screen.dart';
+import 'package:medical_store_app/screens/wholesale/wholesale_screen.dart';
 
 class CustomBottomNavbar extends GetView<NavRouteController> {
   CustomBottomNavbar({super.key});
@@ -10,11 +11,7 @@ class CustomBottomNavbar extends GetView<NavRouteController> {
 
   static List<Widget> pages = [
     HomeScreen(),
-    Container(
-      height: double.maxFinite,
-      width: double.maxFinite,
-      color: Colors.green,
-    ),
+    WholesaleScreen(),
     Container(
       height: double.maxFinite,
       width: double.maxFinite,

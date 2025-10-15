@@ -27,7 +27,7 @@ class AppTextTheme {
     titleMedium: TextStyle(
       fontSize: 16.sp,
       fontFamily: 'Roboto',
-      fontWeight: FontWeight.w400,
+      fontWeight: FontWeight.w500,
     ),
     titleSmall: TextStyle(
       fontSize: 14.sp,
@@ -35,7 +35,7 @@ class AppTextTheme {
       fontWeight: FontWeight.w400,
     ),
     bodyLarge: TextStyle(
-      fontSize: 18.sp,
+      fontSize: 16.sp,
       fontFamily: 'Roboto',
       fontWeight: FontWeight.w500,
       fontStyle: FontStyle.normal,

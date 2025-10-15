@@ -38,6 +38,7 @@ dependencies:
   flutter_screenutil:
   flutter_form_builder:
   form_builder_validators: ^11.2.0
+  gradient_borders: ^1.0.2
 
 
 dev_dependencies:

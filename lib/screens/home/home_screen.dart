@@ -77,18 +77,19 @@ class HomeScreen extends GetView<HomeController> {
   }
 
   PreferredSizeWidget _homeAppBar(BuildContext context) => CustomAppbar(
+    height: 190.h,
     child: Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Container(
-          height: 60.h,
+          height: 55.h,
           width: double.maxFinite,
           padding: EdgeInsets.only(
             left: 20.sp,
             right: 10.sp,
             top: 10.sp,
-            bottom: 10.sp,
+            bottom: 5.sp,
           ),
           decoration: BoxDecoration(
             gradient: LinearGradient(
@@ -99,17 +100,17 @@ class HomeScreen extends GetView<HomeController> {
                 AppColors.gradientLightGreenF6CC,
               ],
             ),
-            borderRadius: BorderRadius.circular(30.r),
+            borderRadius: BorderRadius.circular(25.r),
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               ClipRRect(
-                borderRadius: BorderRadius.circular(35.r),
+                borderRadius: BorderRadius.circular(25.r),
                 child: Image.asset(
                   height: double.maxFinite,
-                  width: 50.w,
+                  width: 40.w,
                   AppAssets.profileJpg,
                   fit: BoxFit.cover,
                 ),
@@ -129,7 +130,7 @@ class HomeScreen extends GetView<HomeController> {
                     "Mr Shahinur",
                     style: Theme.of(
                       context,
-                    ).textTheme.bodyLarge?.copyWith(color: Colors.white),
+                    ).textTheme.titleMedium?.copyWith(color: Colors.white),
                   ),
                 ],
               ),

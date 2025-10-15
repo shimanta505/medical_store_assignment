@@ -4,7 +4,8 @@ import 'package:medical_store_app/consts/app_colors.dart';
 
 class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
   Widget child;
-  CustomAppbar({super.key, required this.child});
+  final double? height;
+  CustomAppbar({super.key, required this.child, this.height});
 
   @override
   Widget build(BuildContext context) {
@@ -17,11 +18,11 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
           padding: EdgeInsets.all(10.sp),
           decoration: BoxDecoration(
             gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
               colors: [
-                AppColors.gradientWhiteEFE0,
                 AppColors.gradientLightGreenF6CC,
+                AppColors.gradientWhiteEFE0,
               ],
               // colors: [Colors.red, Colors.green],
             ),
@@ -34,5 +35,5 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   // TODO: implement preferredSize
-  Size get preferredSize => Size.fromHeight(180.h);
+  Size get preferredSize => Size.fromHeight(height ?? 140.h);
 }
