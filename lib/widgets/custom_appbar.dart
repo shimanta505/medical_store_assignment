@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medical_store_app/consts/app_colors.dart';
 
 class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
-  Widget child;
+  final Widget child;
   final double? height;
   CustomAppbar({super.key, required this.child, this.height});
 
