@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:medical_store_app/routes/nav_route_controller.dart';
 import 'package:medical_store_app/screens/home/home_screen.dart';
-import 'package:medical_store_app/screens/wholesale/widgets/wholesale_product_details.dart';
+import 'package:medical_store_app/screens/order/order_list/order_list_screen.dart';
+import 'package:medical_store_app/screens/wholesale/wholesale_screen.dart';
 
 class CustomBottomNavbar extends GetView<NavRouteController> {
   CustomBottomNavbar({super.key});
@@ -11,12 +12,8 @@ class CustomBottomNavbar extends GetView<NavRouteController> {
 
   static List<Widget> pages = [
     HomeScreen(),
-    WholesaleProductDetails(),
-    Container(
-      height: double.maxFinite,
-      width: double.maxFinite,
-      color: Colors.red,
-    ),
+    WholesaleScreen(),
+    OrderListScreen(),
   ];
 
   @override
@@ -33,8 +30,12 @@ class CustomBottomNavbar extends GetView<NavRouteController> {
             items: [
               BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
               BottomNavigationBarItem(
-                icon: Icon(Icons.person),
-                label: "Profile",
+                icon: Icon(Icons.gif_box),
+                label: "products",
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.shopping_cart),
+                label: "order",
               ),
             ],
           ),

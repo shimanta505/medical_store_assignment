@@ -11,7 +11,12 @@ class WholesaleAppbarWidgetTitle extends StatelessWidget {
       padding: EdgeInsets.only(top: 20.sp),
       child: Row(
         children: [
-          Icon(Icons.arrow_back_ios_new, size: 18.sp),
+          InkWell(
+            onTap: () {
+              Navigator.of(context).pop();
+            },
+            child: Icon(Icons.arrow_back_ios_new, size: 18.sp),
+          ),
           20.horizontalSpace,
           Text(title, style: Theme.of(context).textTheme.titleLarge),
         ],

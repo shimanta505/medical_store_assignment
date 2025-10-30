@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:medical_store_app/screens/order/order_details_screen.dart';
 import 'package:medical_store_app/screens/order/order_list/widgets/order_list_appbar_query_widget.dart';
 import 'package:medical_store_app/screens/order/order_list/widgets/order_list_list_tile.dart';
 import 'package:medical_store_app/screens/wholesale/widgets/wholesale_appbar_widget.dart';
@@ -35,7 +36,14 @@ class OrderListScreen extends StatelessWidget {
       body: ListView.builder(
         itemCount: 10,
         itemBuilder: (context, index) {
-          return OrderListListTile();
+          return InkWell(
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => OrderDetailsScreen()),
+              );
+            },
+            child: OrderListListTile(),
+          );
         },
       ),
     );
