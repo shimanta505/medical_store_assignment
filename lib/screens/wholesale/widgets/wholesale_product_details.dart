@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medical_store_app/screens/order/order_details_screen.dart';
+import 'package:medical_store_app/screens/order/order_list/order_list_screen.dart';
 import 'package:medical_store_app/screens/wholesale/widgets/wholesale_appbar_widget.dart';
 import 'package:medical_store_app/screens/wholesale/widgets/wholesale_product_list_tile.dart';
 import 'package:medical_store_app/screens/wholesale/widgets/wholesale_searchbar_widget.dart';
@@ -33,7 +33,7 @@ class WholesaleProductDetails extends StatelessWidget {
           onTap: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => OrderDetailsScreen()),
+              MaterialPageRoute(builder: (context) => OrderListScreen()),
             );
           },
           child: WholesaleProductListTile(
